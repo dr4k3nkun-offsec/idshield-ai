@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://idshield-backend-eiu9.onrender.com/api/:path*"
+    },
+    {
+      "source": "/uploads/:path*",
+      "destination": "https://idshield-backend-eiu9.onrender.com/uploads/:path*"
+    }
+  ]
+}

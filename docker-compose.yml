@@ -1,0 +1,24 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: idshield-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/uploads:/app/uploads
+      - ./backend/reports:/app/reports
+      - ./backend/idshield.db:/app/idshield.db
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./idshield-ai
+      dockerfile: Dockerfile
+    container_name: idshield-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    restart: unless-stopped

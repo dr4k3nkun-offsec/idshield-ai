@@ -1,0 +1,25 @@
+# Virtual environments & dependencies
+venv/
+.venv/
+node_modules/
+backend/node_modules/
+
+# Python caches & OS artifacts
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini
+~
+
+# Runtime generated uploads, reports & local databases
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/reports/*
+!backend/reports/.gitkeep
+*.db
+*.sqlite3
+
+# Environment files
+.env
+.env.local
